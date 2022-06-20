@@ -9,7 +9,6 @@ function intersection(a, b) {
         if( b.includes(value)){
             let index = b.indexOf(value);
             b.splice(index, 1);
-            console.log('here - ' + b)
             return value;
         }
     });
