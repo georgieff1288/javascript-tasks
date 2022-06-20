@@ -4,7 +4,7 @@ function findValidMatrix(rowSum, colSum) {
     if (first != second || rowSum.length < 0 || rowSum.length > 500 || colSum.length < 0 || colSum.length > 500) {
         return 'Please enter valid arrays'
     }
-    let result = [[], []];
+    let result = new Array(rowSum.length).fill([]);
     for (let i = 0; i < rowSum.length; i++) {
         for (let j = 0; j < colSum.length; j++) {
             result[i][j] = Math.min(rowSum[i], colSum[j]);
@@ -17,7 +17,7 @@ function findValidMatrix(rowSum, colSum) {
 }
 
 console.log(findValidMatrix([3, 8], [4, 7]));
-// console.log(findValidMatrix([5,7,10], [8,6,8]));
+console.log(findValidMatrix([5,7,10], [8,6,8]));
 console.log(findValidMatrix([14, 9], [6, 9, 8]));
 console.log(findValidMatrix([1, 0], [1]));
 console.log(findValidMatrix([0], [0]));
